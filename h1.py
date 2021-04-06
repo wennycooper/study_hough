@@ -19,9 +19,9 @@ print(h, w)
 
 
 t1 = datetime.datetime.now()
-minLineLength = 550 
-maxLineGap = 20
-lines = cv2.HoughLinesP(edges,3.0,np.pi/180*1.0,5.0, np.array([]),minLineLength,maxLineGap)
+minLineLength = 150 
+maxLineGap = 10
+lines = cv2.HoughLinesP(edges, rho=1, theta=np.pi/180*1, threshold=5, minLineLength=minLineLength, maxLineGap=maxLineGap)
 
 t2 = datetime.datetime.now()
 
